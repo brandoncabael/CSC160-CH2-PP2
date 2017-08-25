@@ -1,7 +1,10 @@
 #include<iostream>
 using namespace std;
+
+
 int main() {
     double n, r, guess, prevGuess;
+	int x;
     cout << "Please select a number to calculate it's square root: ";
     cin >> n;
 
@@ -9,7 +12,7 @@ int main() {
         guess = n/2;
         r = n / guess;
         guess = (guess + r) / 2;
-    }
+	};
 
     cout << "The square root of " << n << "is " << guess << ".";
     return 0;
