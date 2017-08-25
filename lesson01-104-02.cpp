@@ -4,16 +4,18 @@ using namespace std;
 
 int main() {
     double n, r, guess, prevGuess;
-	int x;
+	int x = 0;
     cout << "Please select a number to calculate it's square root: ";
     cin >> n;
 
-    for(x, x <= 100, x++){
-        guess = n/2;
+	guess = n / 2;
+
+	for (x; x <= 100; x++) {
         r = n / guess;
         guess = (guess + r) / 2;
 	};
 
-    cout << "The square root of " << n << "is " << guess << ".";
+    cout << "The square root of " << n << " is " << guess << ".";
+	system("pause");
     return 0;
 }
