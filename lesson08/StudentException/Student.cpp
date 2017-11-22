@@ -51,7 +51,7 @@ int Student::sneakyCount = 0;
 
 bool Student::timeToThrow()
 {
-	if (sneakyCount == 4)
+	if (sneakyCount == 2)
 		return true;
 	else
 		return false;

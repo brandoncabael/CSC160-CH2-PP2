@@ -13,7 +13,7 @@ int main() {
 	    testStudent1.enroll("CSC-160-500");
         testStudent2.enroll("CSC-161-500");
         testStudent3.enroll("PHI-112-500");
-        cout << "Calls to Enroll Member Function Worked Fine\n\n";
+        cout << "\nCalls to Enroll Member Function Worked Fine\n\n";
         cout << "End of Student Exception Handling Testing";
 	}
 	catch (StudentException error) {
