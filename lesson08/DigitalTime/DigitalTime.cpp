@@ -11,6 +11,7 @@
 #include <cctype>
 #include <cstdlib>
 #include "DigitalTime.h"
+#include "DigitalTimeException.h"
 using namespace std;
 
 //These FUNCTION DECLARATIONS are for use in the definition of 
@@ -39,8 +40,7 @@ DigitalTime::DigitalTime(int the_hour, int the_minute)
 {
 	if (the_hour < 0 || the_hour > 23 || the_minute < 0 || the_minute > 59)
 	{
-        cout << "Illegal argument to DigitalTime constructor.";
-        exit(1);
+        throw DigitalTimeException(101, "Something is completely messed up!");
 	}
 	else
 	{
@@ -121,16 +121,14 @@ void read_minute(istream& ins, int& the_minute)
 
 	if (!(isdigit(c1) && isdigit(c2)))
 	{
-        cout << "Error illegal input to read_minute\n";
-        exit(1);
+        throw DigitalTimeException(102,"Error illegal input to read_minute\n");
 	}
 
 	the_minute = digit_to_int(c1)*10 + digit_to_int(c2);
 
 	if (the_minute < 0 || the_minute > 59)
 	{
-        cout << "Error illegal input to read_minute\n";
-        exit(1);
+        throw DigitalTimeException(103,"Error illegal input to read_minute\n");
 	}
 }
 
@@ -141,8 +139,7 @@ void read_hour(istream& ins, int& the_hour)
 	ins >> c1 >> c2;
 	if ( !( isdigit(c1) && (isdigit(c2) || c2 == ':' ) ) )
 	{
-        cout << "Error illegal input to read_hour\n";
-        exit(1);
+        throw DigitalTimeException(104,"Error illegal input to read_hour\n");
 	}
 
 	if (isdigit(c1) && c2 == ':')
@@ -155,14 +152,12 @@ void read_hour(istream& ins, int& the_hour)
 		ins >> c2;//discard ':'
 		if (c2 != ':')
 		{
-            	cout << "Error illegal input to read_hour\n";
-            	exit(1);
+            	throw DigitalTimeException(105,"Error illegal input to read_hour\n");
 		}
 	}
 
 	if ( the_hour < 0 || the_hour > 23 )
 	{
-        cout << "Error illegal input to read_hour\n";
-        exit(1);
+        throw DigitalTimeException(106,"Error illegal input to read_hour\n");
 	}
 }
