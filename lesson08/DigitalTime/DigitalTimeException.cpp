@@ -1,3 +1,5 @@
+//Brandon Cabael
+
 #include <iostream>
 #include <string>
 #include "DigitalTimeException.h"

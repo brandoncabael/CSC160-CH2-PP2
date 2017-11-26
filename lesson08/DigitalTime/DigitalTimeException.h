@@ -1,3 +1,5 @@
+//Brandon Cabael
+
 #ifndef DIGITALTIMEEXCEPTION_H
 #define DIGITALTIMEEXCEPTION_H
 
