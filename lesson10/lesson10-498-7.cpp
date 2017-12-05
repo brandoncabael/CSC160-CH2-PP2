@@ -1,3 +1,7 @@
+//Brandon Cabael
+//Lesson10, Page 498, PP 7
+//Pig Latin Conversion
+
 #include <iostream>
 #include <string>
 #include <cstdlib>
